@@ -1,6 +1,9 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -26,49 +29,80 @@ background:#f5f5f5;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
 url('entrada.jpg');
+
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
+
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
+
 color:white;
 padding:20px;
 }
 
 .hero-content{
-max-width:800px;
-animation:fadeIn 1.5s ease;
+max-width:900px;
+animation:fadeIn 1.2s ease;
 }
 
 .hero h1{
-font-size:70px;
-margin-bottom:20px;
-text-shadow:2px 2px 10px black;
+font-size:110px;
+font-weight:900;
+line-height:.90;
+text-transform:uppercase;
+text-shadow:3px 3px 15px rgba(0,0,0,.6);
 }
 
-.hero p{
-font-size:28px;
-line-height:1.6;
-margin-bottom:30px;
+.hero h1 span{
+color:#f4b400;
 }
 
-.btn{
-display:inline-block;
-padding:15px 35px;
+.slogan{
+font-size:32px;
+line-height:1.8;
+margin-top:30px;
+margin-bottom:40px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn-nav{
 background:#f4b400;
 color:black;
+padding:18px 30px;
+border-radius:18px;
 text-decoration:none;
 font-weight:bold;
-border-radius:40px;
 font-size:18px;
+box-shadow:0 10px 20px rgba(0,0,0,.35);
 transition:.3s;
 }
 
-.btn:hover{
-transform:scale(1.05);
+.btn-map{
+background:#0d2f5f;
+color:white;
+padding:18px 30px;
+border-radius:18px;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+box-shadow:0 10px 20px rgba(0,0,0,.35);
+transition:.3s;
+}
+
+.btn-nav:hover,
+.btn-map:hover{
+transform:translateY(-3px);
 }
 
 .section{
@@ -77,10 +111,12 @@ margin:auto;
 padding:80px 20px;
 }
 
-.section h2{
+.section-title{
 text-align:center;
-font-size:40px;
+font-size:42px;
+font-weight:bold;
 margin-bottom:50px;
+color:#0d1b2a;
 }
 
 .cards{
@@ -91,11 +127,12 @@ gap:25px;
 
 .card{
 background:white;
-padding:30px;
+padding:35px;
 border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.12);
-font-size:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.10);
 text-align:center;
+font-size:22px;
+font-weight:600;
 transition:.3s;
 }
 
@@ -104,22 +141,45 @@ transform:translateY(-5px);
 }
 
 .location{
-background:white;
-text-align:center;
+background:#071c36;
+color:white;
 padding:80px 20px;
 }
 
-.location p{
-font-size:22px;
+.location-container{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 2fr;
+gap:30px;
+align-items:center;
+}
+
+.location-info{
+font-size:24px;
 line-height:1.8;
+}
+
+.location-buttons{
+margin-top:30px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.map{
+width:100%;
+height:450px;
+border-radius:20px;
+overflow:hidden;
 }
 
 .footer{
 background:#111;
 color:white;
-text-align:center;
 padding:40px;
-font-size:18px;
+text-align:center;
+font-size:20px;
 }
 
 @keyframes fadeIn{
@@ -136,20 +196,29 @@ transform:translateY(0);
 @media(max-width:768px){
 
 .hero h1{
-font-size:42px;
+font-size:60px;
 }
 
-.hero p{
-font-size:20px;
+.slogan{
+font-size:22px;
 }
 
-.section h2{
-font-size:30px;
+.location-container{
+grid-template-columns:1fr;
+}
+
+.section-title{
+font-size:32px;
+}
+
+.card{
+font-size:18px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -158,19 +227,38 @@ font-size:30px;
 
 <div class="hero-content">
 
-<h1>PARQUEO PÚBLICO</h1>
+<h1>
+PARQUEO<br>
+<span>PÚBLICO</span>
+</h1>
 
-<p>
-Llegue fácil.<br>
-Estacione cómodo.<br>
-Continúe su camino.
-</p>
+<div class="slogan">
 
-<a class="btn"
-href="https://maps.google.com/?q=8+Calle+0-38+Zona+1+Guatemala"
+🚗 Llegue fácil.<br>
+🅿️ Estacione cómodo.<br>
+✅ Continúe su camino.
+
+</div>
+
+<div class="hero-buttons">
+
+<a class="btn-nav"
+href="https://www.google.com/maps/dir/?api=1&destination=8a+Calle+0-38+Zona+1+Guatemala+Guatemala"
 target="_blank">
-📍 VER UBICACIÓN
+
+📍 INICIAR NAVEGACIÓN
+
 </a>
+
+<a class="btn-map"
+href="https://www.google.com/maps/search/?api=1&query=8a+Calle+0-38+Zona+1+Guatemala+Guatemala"
+target="_blank">
+
+🗺️ ABRIR GOOGLE MAPS
+
+</a>
+
+</div>
 
 </div>
 
@@ -178,33 +266,23 @@ target="_blank">
 
 <section class="section">
 
-<h2>Ubicación estratégica en Zona 1</h2>
+<h2 class="section-title">
+📍 UBICACIÓN ESTRATÉGICA EN ZONA 1
+</h2>
 
 <div class="cards">
 
-<div class="card">
-📍 Ubicación céntrica
-</div>
+<div class="card">📍 Ubicación céntrica</div>
 
-<div class="card">
-🚗 Fácil acceso vehicular
-</div>
+<div class="card">🚗 Fácil acceso vehicular</div>
 
-<div class="card">
-🅿️ Espacios disponibles
-</div>
+<div class="card">🅿️ Espacios disponibles</div>
 
-<div class="card">
-🏢 Cerca de comercios y oficinas
-</div>
+<div class="card">🏢 Cerca de comercios y oficinas</div>
 
-<div class="card">
-🏛️ Acceso rápido al Centro Histórico
-</div>
+<div class="card">🏛️ Acceso rápido al Centro Histórico</div>
 
-<div class="card">
-✅ Atención personalizada
-</div>
+<div class="card">✅ Atención personalizada</div>
 
 </div>
 
@@ -212,34 +290,64 @@ target="_blank">
 
 <section class="location">
 
-<h2>Nuestra ubicación</h2>
+<div class="location-container">
 
-<br><br>
+<div>
 
-<a class="btn"
-href="https://www.google.com/maps/search/?api=1&query=8+Calle+0-38+Zona+1+Guatemala"
+<div class="location-info">
+
+📍 8a Calle 0-38<br>
+Zona 1<br>
+Guatemala, Guatemala
+
+</div>
+
+<div class="location-buttons">
+
+<a class="btn-nav"
+href="https://www.google.com/maps/dir/?api=1&destination=8a+Calle+0-38+Zona+1+Guatemala+Guatemala"
 target="_blank">
-🗺️ Abrir Google Maps
+
+📍 INICIAR NAVEGACIÓN
+
 </a>
 
-<a class="btn"
-style="margin-left:10px;"
-href="https://www.google.com/maps/dir/?api=1&destination=8+Calle+0-38+Zona+1+Guatemala"
+<a class="btn-map"
+href="https://www.google.com/maps/search/?api=1&query=8a+Calle+0-38+Zona+1+Guatemala+Guatemala"
 target="_blank">
-📍 Iniciar navegación
+
+🗺️ ABRIR GOOGLE MAPS
+
 </a>
+
+</div>
+
+</div>
+
+<div class="map">
+
+<iframe
+src="https://maps.google.com/maps?q=8a%20Calle%200-38%20Zona%201%20Guatemala%20Guatemala&t=&z=17&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="100%"
+style="border:0;"
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
 
 </section>
-  
+
 <div class="footer">
 
 PARQUEO PÚBLICO<br><br>
 
-Llegue fácil.<br>
-Estacione cómodo.<br>
-Continúe su camino.
+Llegue fácil • Estacione cómodo • Continúe su camino
 
 </div>
 
 </body>
 </html>
+```
