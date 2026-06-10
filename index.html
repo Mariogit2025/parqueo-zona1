@@ -1,12 +1,12 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Parqueo Público</title>
+<title>Parqueo Público Zona 1</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -20,13 +20,13 @@ box-sizing:border-box;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#fff;
+background:#ffffff;
 color:#222;
 }
 
 .hero{
 
-height:100vh;
+height:100svh;
 
 background:
 linear-gradient(
@@ -56,22 +56,19 @@ color:white;
 
 .hero h1{
 
-font-size:clamp(48px,9vw,90px);
+font-size:clamp(48px,10vw,90px);
 font-weight:700;
 line-height:.95;
-
-margin-bottom:25px;
-
 letter-spacing:2px;
+
+margin-bottom:20px;
 
 }
 
 .hero p{
 
 font-size:clamp(18px,4vw,28px);
-
 font-weight:300;
-
 line-height:1.7;
 
 margin-bottom:35px;
@@ -81,8 +78,8 @@ margin-bottom:35px;
 .buttons{
 
 display:flex;
-gap:15px;
 justify-content:center;
+gap:15px;
 flex-wrap:wrap;
 
 }
@@ -90,7 +87,6 @@ flex-wrap:wrap;
 .btn{
 
 padding:16px 28px;
-
 border-radius:14px;
 
 text-decoration:none;
@@ -104,14 +100,14 @@ transition:.25s;
 .btn-primary{
 
 background:#d4af37;
-color:black;
+color:#000;
 
 }
 
 .btn-secondary{
 
-background:white;
-color:black;
+background:#ffffff;
+color:#000;
 
 }
 
@@ -123,20 +119,20 @@ transform:translateY(-2px);
 
 .location{
 
-padding:70px 20px;
-
-max-width:1100px;
-
+max-width:1200px;
 margin:auto;
+
+padding:60px 20px;
 
 }
 
 .location h2{
 
-font-size:32px;
-margin-bottom:20px;
-
 text-align:center;
+
+font-size:32px;
+
+margin-bottom:25px;
 
 }
 
@@ -148,7 +144,7 @@ font-size:20px;
 
 line-height:1.8;
 
-margin-bottom:35px;
+margin-bottom:30px;
 
 }
 
@@ -167,17 +163,17 @@ box-shadow:0 8px 25px rgba(0,0,0,.12);
 
 .footer{
 
-padding:35px;
-
-text-align:center;
-
 background:#111;
 
 color:white;
 
-font-size:15px;
+padding:30px;
 
-margin-top:60px;
+text-align:center;
+
+margin-top:50px;
+
+font-size:15px;
 
 }
 
@@ -186,6 +182,18 @@ margin-top:60px;
 .hero{
 
 height:100svh;
+
+}
+
+.hero h1{
+
+font-size:52px;
+
+}
+
+.hero p{
+
+font-size:20px;
 
 }
 
@@ -201,21 +209,21 @@ width:100%;
 
 }
 
-.map{
-
-height:320px;
-
-}
-
 .location h2{
 
-font-size:26px;
+font-size:28px;
 
 }
 
 .address{
 
 font-size:18px;
+
+}
+
+.map{
+
+height:320px;
 
 }
 
@@ -250,7 +258,7 @@ Continúe su camino.
 
 <a
 class="btn btn-primary"
-href="https://www.google.com/maps/dir/?api=1&destination=8a+Calle+0-38+Zona+1+Guatemala+Guatemala"
+href="https://www.google.com/maps/dir/?api=1&destination=14.64342,-90.52046"
 target="_blank">
 
 Iniciar navegación
@@ -259,7 +267,7 @@ Iniciar navegación
 
 <a
 class="btn btn-secondary"
-href="https://www.google.com/maps/search/?api=1&query=8a+Calle+0-38+Zona+1+Guatemala+Guatemala"
+href="https://www.google.com/maps/search/?api=1&query=14.64342,-90.52046"
 target="_blank">
 
 Abrir Google Maps
@@ -280,24 +288,24 @@ Abrir Google Maps
 
 8a Calle 0-38<br>
 Zona 1<br>
-Guatemala, Guatemala
+01001 Guatemala, Guatemala
 
 </div>
 
 <iframe
 class="map"
-src="https://maps.google.com/maps?q=8a%20Calle%200-38%20Zona%201%20Guatemala%20Guatemala&t=&z=17&ie=UTF8&iwloc=&output=embed">
+src="https://maps.google.com/maps?q=14.64342,-90.52046&t=&z=18&ie=UTF8&iwloc=&output=embed">
 </iframe>
 
 </section>
 
 <footer class="footer">
 
-Parqueo Público<br>
-Zona 1 · Guatemala
+Parqueo Público · Zona 1 · Guatemala
 
 </footer>
 
 </body>
+
 </html>
 ```
