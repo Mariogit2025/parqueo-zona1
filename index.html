@@ -20,7 +20,7 @@ box-sizing:border-box;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#ffffff;
+background:#fff;
 color:#222;
 }
 
@@ -46,6 +46,7 @@ align-items:center;
 text-align:center;
 
 padding:20px;
+
 }
 
 .hero-content{
@@ -111,15 +112,15 @@ transition:.25s;
 
 background:#d4af37;
 
-color:#000;
+color:black;
 
 }
 
 .btn-secondary{
 
-background:#ffffff;
+background:white;
 
-color:#000;
+color:black;
 
 }
 
@@ -131,17 +132,17 @@ transform:translateY(-2px);
 
 .location{
 
-max-width:1000px;
+padding:70px 20px;
+
+max-width:900px;
 
 margin:auto;
 
-padding:70px 20px;
+text-align:center;
 
 }
 
 .location h2{
-
-text-align:center;
 
 font-size:32px;
 
@@ -151,27 +152,49 @@ margin-bottom:25px;
 
 .address{
 
-text-align:center;
-
 font-size:20px;
 
 line-height:1.8;
 
-margin-bottom:35px;
+margin-bottom:40px;
 
 }
 
-.map{
+.qr-section{
 
-width:100%;
+padding:20px;
 
-height:450px;
+}
 
-border:none;
+.qr-title{
 
-border-radius:20px;
+font-size:22px;
 
-box-shadow:0 8px 25px rgba(0,0,0,.12);
+font-weight:600;
+
+margin-bottom:20px;
+
+}
+
+.qr-image{
+
+width:220px;
+
+max-width:80%;
+
+border-radius:16px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+.qr-text{
+
+margin-top:15px;
+
+font-size:15px;
+
+color:#666;
 
 }
 
@@ -184,6 +207,8 @@ color:white;
 padding:30px;
 
 text-align:center;
+
+margin-top:50px;
 
 font-size:15px;
 
@@ -233,9 +258,9 @@ font-size:18px;
 
 }
 
-.map{
+.qr-image{
 
-height:320px;
+width:180px;
 
 }
 
@@ -304,10 +329,27 @@ Zona 1<br>
 
 </div>
 
-<iframe
-class="map"
-src="https://maps.google.com/maps?q=14.64342,-90.52046&t=&z=18&ie=UTF8&iwloc=&output=embed">
-</iframe>
+<div class="qr-section">
+
+<div class="qr-title">
+
+Compartir ubicación
+
+</div>
+
+<img
+src="qr.png"
+alt="Código QR"
+class="qr-image">
+
+<div class="qr-text">
+
+Escanee este código para abrir esta página
+desde otro dispositivo.
+
+</div>
+
+</div>
 
 </section>
 
